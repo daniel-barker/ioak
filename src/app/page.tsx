@@ -2,101 +2,81 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen flex flex-col">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-16 md:py-24 overflow-hidden">
+        {/* Blood Splatter Overlay (additional to the one in globals.css) */}
+        <div className="absolute top-0 right-0 w-1/3 h-1/3 opacity-20" style={{
+          backgroundImage: "radial-gradient(circle, rgba(185,28,28,0.8) 0%, rgba(0,0,0,0) 70%)",
+        }}></div>
+        
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16 z-10">
+          {/* Book Cover */}
+          <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+            <div className="relative w-[280px] md:w-[350px] vintage-border">
+              <Image
+                src="/images/cover.png"
+                alt="Ingredients of a Killer book cover"
+                width={500}
+                height={750}
+                priority
+                className="w-full h-auto shadow-2xl"
+              />
+              <div className="absolute -bottom-4 -right-4 bg-[#b91c1c] text-white px-3 py-1 transform rotate-[-5deg] shadow-lg">
+                <span className="font-bold">NEW RELEASE</span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Book Info */}
+          <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
+            <h1 className="font-heading text-5xl md:text-7xl text-white text-shadow tracking-wider">
+              INGREDIENTS <span className="text-[#b91c1c]">OF A</span> KILLER
+            </h1>
+            
+            <h2 className="font-heading text-3xl md:text-4xl text-[#b91c1c] tracking-wide">
+              BY M.C. LAWRENCE
+            </h2>
+            
+            <div className="max-w-lg mx-auto md:mx-0">
+              <p className="text-xl md:text-2xl italic font-light mb-4 text-shadow">
+                &ldquo;He&rsquo;s the boy next door—with blood on his apron.&rdquo;
+              </p>
+              
+              <h3 className="text-xl md:text-2xl font-heading text-[#b91c1c] mb-3">
+                THE TASTE OF TERROR
+              </h3>
+              
+              <p className="text-lg text-gray-300 mb-8">
+                What happens when the perfect son turns into the perfect killer? Add a dash of charm, 
+                a cup of trauma, and a secret sauce no one wants to taste in this twisted psychological thriller.
+              </p>
+              
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        
+        {/* Vintage cookbook elements */}
+        <div className="absolute bottom-8 left-8 hidden md:block">
+          <div className="transform rotate-[-15deg] opacity-30">
+            <div className="w-32 h-32 border-t-2 border-l-2 border-[#b91c1c]"></div>
+          </div>
+        </div>
+        
+        <div className="absolute top-8 right-8 hidden md:block">
+          <div className="transform rotate-[15deg] opacity-30">
+            <div className="w-32 h-32 border-b-2 border-r-2 border-[#b91c1c]"></div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Footer */}
+      <footer className="bg-black py-6 border-t border-[#b91c1c]/30">
+        <div className="container mx-auto px-4 text-center text-gray-400 text-sm">
+          <p>© {new Date().getFullYear()} M.C. Lawrence. All rights reserved.</p>
+          <p className="mt-2">&ldquo;Ingredients of a Killer&rdquo; is a work of fiction. Names, characters, places, and incidents are products of the author&rsquo;s imagination.</p>
+        </div>
       </footer>
     </div>
   );
