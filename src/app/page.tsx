@@ -76,6 +76,7 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center text-gray-400 text-sm">
           <p>© {new Date().getFullYear()} M.C. Lawrence. All rights reserved.</p>
           <p className="mt-2">&ldquo;Ingredients of a Killer&rdquo; is a work of fiction. Names, characters, places, and incidents are products of the author&rsquo;s imagination.</p>
+          <p className="mt-4 text-xs opacity-70">Built by <a href="https://brightline.dev" target="_blank" rel="noopener noreferrer" className="text-[#b91c1c] hover:underline transition-colors">Brightline</a></p>
         </div>
       </footer>
     </div>
